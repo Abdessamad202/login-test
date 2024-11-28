@@ -14,3 +14,18 @@ loginButton.addEventListener('mouseout', () => {
   loginButton.querySelector("i").classList.remove("change");
   loginButton.querySelector("span").classList.remove("change");
 });
+let icon = document.querySelector(".form-floating #icon")
+let passwordField = document.querySelector(".form-floating .password")
+// passwordField.setAttribute("type","text")
+// console.log(icon);
+
+icon.onclick = () => {
+  if (passwordField.getAttribute("type")=="password") {
+    passwordField.setAttribute("type","text")
+    icon.setAttribute("class","fa-solid fa-eye-slash")
+  }else{
+    passwordField.setAttribute("type","password")
+    icon.setAttribute("class","fa-solid fa-eye")
+  }
+  passwordField.focus()
+}

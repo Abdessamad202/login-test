@@ -20,10 +20,11 @@
   }
 
   body {
-    background-image: url(./pexels-pixabay-261806.jpg);
+    background-image: url(./pexels-rafael-cosquiere-1059286-2041540.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: rgb(0,0,0,0.5);
     height: 100vh;
   }
 /* Default styles for large screens */
@@ -38,10 +39,10 @@
 }
 
 .login-container {
-  height: 60%; /* Takes up 75% of the height */
-  padding: 80px; /* Adds space inside the container */
+  height: 80%; /* Takes up 75% of the height */
+  padding: 50px 80px; /* Adds space inside the container */
   background-color: rgba(255, 255, 255, 0.22); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Blurs the background */
+  backdrop-filter: blur(15px); /* Blurs the background */
   border-radius: 50px; /* Rounded corners */
 }
 
@@ -64,7 +65,7 @@
 
   .login-container {
     padding: 40px; /* Further reduce padding for very small screens */
-    height: 65%; /* Make the login container take up more height */
+    height: 80%; /* Make the login container take up more height */
   }
 
   /* Optionally adjust font sizes for smaller screens */
@@ -90,7 +91,7 @@
 
   .login-container {
     padding: 20px; /* Much smaller padding for ultra-small screens */
-    height: 70%; /* Allow more space for the form */
+    height: 85%; /* Allow more space for the form */
   }
 
   .login-title {
@@ -110,7 +111,7 @@
   .login-title {
     font-size: 36px;
     font-weight: 700;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     text-transform: uppercase;
   }
@@ -143,7 +144,8 @@
 
   label {
     background-color: transparent;
-    color: white;
+    color: rgba(255, 255, 255, 0.687);
+    font-weight: bold;
   }
 
   label:focus-visible {
@@ -203,6 +205,18 @@
     background: #9B071A;
     color: white;
   }
+  .form-floating{
+    position: relative;
+    z-index: 2;
+  }
+  .form-floating i {
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    top: 30px;
+    cursor: pointer;
+    color: white;
+  }
 </style>
 
 <body>
@@ -214,17 +228,18 @@
           <div class="login-fields">
             <div class="form-floating mb-3">
               <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
+              <label for="floatingInput">Email Address</label>
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <i class="fa-solid fa-eye" id="icon"></i>
+              <input type="password"  class="form-control password" id="floatingPassword" placeholder="Password">
               <label for="floatingPassword">Password</label>
             </div>
             <a href="#" class="forgot-password">Forget The Password?</a>
 
           </div>
           <div class="div-button">
-            <button type="submit"  class="col-4 btn login-button"><span>LOGIN</span><i class="fa-solid fa-arrow-right"></i></button>
+            <button type="submit"  class="col-4 login-button"><span>LOGIN</span><i class="fa-solid fa-arrow-right"></i></button>
           <!-- </div> -->
         </form>
       </div>
